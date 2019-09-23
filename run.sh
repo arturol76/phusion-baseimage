@@ -6,6 +6,8 @@ show_help()
     echo Container name is specified by "container_name".
     echo Container will expose SSH service on port "docker_port".
     echo
+    echo NOTE: it will create and mount a named volume for the persistent storage of .ssh files.
+    echo
     echo USAGE:
     echo ./run.sh docker_ip container_name docker_port
     echo
