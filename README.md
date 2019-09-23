@@ -1,8 +1,7 @@
 # phusion-baseimage
-A baseimage for dockers using phusion.
+A baseimage for dockers using phusion with SSH server enabled.
 
-Features:
-* ssh enabled
+Additional features:
 * nano editor
 * scripts to inject ssh keys and create/export keys
 * scripts to build, run
