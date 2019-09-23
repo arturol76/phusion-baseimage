@@ -2,9 +2,9 @@
 A baseimage for dockers using phusion.
 
 Features:
-* ssh
-* scripts to inject ssh keys and create/export keys
+* ssh enabled
 * nano editor
+* scripts to inject ssh keys and create/export keys
 * scripts to build, run
 
 Current version: 
@@ -15,7 +15,6 @@ Current version:
 ## Run
 
 ## Usage
- 
 
 ## Change Log
 2019-09-22

@@ -1,20 +1,36 @@
 #!/bin/bash
-echo ------------------------------------------------------
-echo USAGE:
-echo ./run.sh docker_ip container_name docker_port
-echo
-echo example:
-echo    ./run.sh 192.168.2.96 phusion-baseimage-test 6022
-echo ------------------------------------------------------
-echo
+show_help()
+{
+    echo ------------------------------------------------------------------
+    echo Runs "arturol76/phusion-baseimage" on the target "docker-ip" host.
+    echo Container name is specified by "container_name".
+    echo Container will expose SSH service on port "docker_port".
+    echo
+    echo USAGE:
+    echo ./run.sh docker_ip container_name docker_port
+    echo
+    echo EXAMPLE:
+    echo ./run.sh 192.168.2.96 phusion-baseimage-test 6022
+    echo ------------------------------------------------------------------
+    echo
+}
+
+#checks number of parameters
+if [ "$#" -ne $num_of_params ]; then
+    echo "Illegal number of parameters."
+    echo
+    show_help
+    exit 1
+fi
+
+num_of_params=3
+docker_host=$1
+docker_name=$2
+docker_port=$3
 
 #EDIT TO YOUR NEEDS--------------------
 docker_image=arturol76/phusion-baseimage
 #--------------------------------------
-
-docker_host=$1
-docker_name=$2
-docker_port=$3
 
 echo creating volumes...
 volume_ssh=${docker_name}_ssh
@@ -45,3 +61,5 @@ docker -H $docker_host create \
 echo starting the container...
 docker -H $docker_host start \
     $docker_name
+
+exit 0
