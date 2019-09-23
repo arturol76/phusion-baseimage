@@ -17,6 +17,11 @@ show_help()
     echo
 }
 
+num_of_params=3
+docker_host=$1
+docker_name=$2
+docker_port=$3
+
 #checks number of parameters
 if [ "$#" -ne $num_of_params ]; then
     echo "Illegal number of parameters."
@@ -25,10 +30,7 @@ if [ "$#" -ne $num_of_params ]; then
     exit 1
 fi
 
-num_of_params=3
-docker_host=$1
-docker_name=$2
-docker_port=$3
+
 
 #EDIT TO YOUR NEEDS--------------------
 docker_image=arturol76/phusion-baseimage

@@ -14,6 +14,13 @@ show_help()
     echo
 }
 
+num_of_params=5
+docker_host=$1
+docker_name=$2
+key_filename=$3
+key_passphrase=$4
+key_comment=$5
+
 #checks number of parameters
 if [ "$#" -ne $num_of_params ]; then
     echo "Illegal number of parameters."
@@ -21,13 +28,6 @@ if [ "$#" -ne $num_of_params ]; then
     show_help
     exit 1
 fi
-
-num_of_params=5
-docker_host=$1
-docker_name=$2
-key_filename=$3
-key_passphrase=$4
-key_comment=$5
 
 echo creating volumes...
 volume_ssh=${docker_name}_ssh

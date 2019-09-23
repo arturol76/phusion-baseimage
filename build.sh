@@ -12,6 +12,9 @@ show_help()
     echo
 }
 
+num_of_params=1
+docker_host=$1
+
 #checks number of parameters
 if [ "$#" -ne $num_of_params ]; then
     echo "Illegal number of parameters."
@@ -19,9 +22,6 @@ if [ "$#" -ne $num_of_params ]; then
     show_help
     exit 1
 fi
-
-num_of_params=1
-docker_host=$1
 
 #EDIT TO YOUR NEEDS--------------------
 default_repo="arturol76"
