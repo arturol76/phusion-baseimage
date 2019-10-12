@@ -2,14 +2,14 @@
 show_help()
 {
     echo ------------------------------------------------------------------
-    echo Runs "arturol76/phusion-baseimage" on the target "docker-ip" host.
+    echo Runs "arturol76/phusion-baseimage" on the target "docker-host" host.
     echo Container name is specified by "container_name".
     echo Container will expose SSH service on port "ssh_docker_port".
     echo
     echo NOTE: it will create and mount a named volume for the persistent storage of .ssh files.
     echo
     echo USAGE:
-    echo ./run.sh docker_ip container_name ssh_docker_port
+    echo ./run.sh docker_host container_name ssh_docker_port
     echo
     echo EXAMPLE:
     echo ./run.sh 192.168.2.96 phusion-baseimage-test 6022

@@ -40,8 +40,8 @@ echo adding pub key to authorized_keys...
 docker -H $docker_host exec -it $docker_name /bin/sh -c "cat /tmp/${key_filename}.pub >> /root/.ssh/authorized_keys"
 
 echo exporting key pair to local system...
-docker -H $docker_host cp $docker_name:/tmp/$key_filename ./keys
-docker -H $docker_host cp $docker_name:/tmp/${key_filename}.pub ./keys
+docker -H $docker_host cp $docker_name:/tmp/$key_filename .
+docker -H $docker_host cp $docker_name:/tmp/${key_filename}.pub .
 
 echo removing keys...
 docker -H $docker_host exec -it $docker_name rm -f /tmp/$key_filename

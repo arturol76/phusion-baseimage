@@ -29,7 +29,7 @@ fi
 
 echo
 echo copying SSH keys...
-docker -H $docker_host cp ./keys/$key_filename $docker_name:/tmp
+docker -H $docker_host cp ./$key_filename $docker_name:/tmp
 docker -H $docker_host exec -it $docker_name /bin/sh -c "cat /tmp/$key_filename >> /root/.ssh/authorized_keys"
 docker -H $docker_host exec -it $docker_name rm -f /tmp/$key_filename
 

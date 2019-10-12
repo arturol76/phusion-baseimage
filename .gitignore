@@ -7,3 +7,4 @@ keys/*
 
 # exception to the rule
 !keys/.gitkeep
+!keys/*.sh
