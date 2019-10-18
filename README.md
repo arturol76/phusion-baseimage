@@ -6,19 +6,26 @@ Additional features:
 * scripts to inject ssh keys and create/export keys
 * scripts to build, run
 
-Current version: 
-* base image: phusion 0.10.2
+## Versions: 
+* phusion 0.10.2
+* phusion 0.11
 
 ## Build
 Have a look to script build.sh.
 Such script will build the dockerfile on the target host specified by docker_ip.
 
 USAGE:
-`./build.sh docker_ip`
+`./build.sh docker_ip phusion_tag`
+
+docker_ip: ip of docker host
+phusion_tag: 0.10.2 or 0.11
 
 EXAMPLE:
-`./build.sh 192.168.2.96`
+To build the image based on phusion/baseimage:0.10.2
+`./build.sh 192.168.2.96 0.10.2`
 
+To build the image based on phusion/baseimage:0.11
+`./build.sh 192.168.2.96 0.11`
 
 ## Run
 Have a look to script run.sh.
