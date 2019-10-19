@@ -41,28 +41,9 @@ USAGE:
 EXAMPLE:
 `./run.sh 192.168.2.96 phusion-baseimage-test 6022`
 
-## VSCODE: sample config file for the SFTP extension
-Assuming you use pageant to manage the key authentication:
-```
-{
-    "name": "mydocker",
-    "host": "192.168.2.96",
-    "protocol": "sftp",
-    "port": 7122,
-    "username": "root",
-    "remotePath": "/",
-    "agent": "pageant",
-    "passphrase": true,
-    "uploadOnSave": true
-}
-```
-
 NOTE: 
 * change "port" to match the SSH port of the container
 * change "remotePath" to match the target folder 
-
-## Usage
-
 
 ## Change Log
 2019-09-22
