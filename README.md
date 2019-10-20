@@ -46,7 +46,7 @@ NOTE:
 * change "remotePath" to match the target folder
 
 ## SSH Keys
-Have a look to the [keys](./keys/README.md).
+Have a look to the [keys](./keys).
 
 ## Change Log
 2019-09-22
