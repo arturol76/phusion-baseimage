@@ -47,6 +47,7 @@ NOTE:
 
 ## SSH Keys
 Have a look to the [keys](./keys).
+IMPORTANT: the container must be running.
 
 ## Change Log
 2019-09-22
