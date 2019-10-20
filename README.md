@@ -43,7 +43,21 @@ EXAMPLE:
 
 NOTE: 
 * change "port" to match the SSH port of the container
-* change "remotePath" to match the target folder 
+* change "remotePath" to match the target folder
+
+## SSH Keys
+Scripts to create a new SSH key pair or to use an existing one are provided in folder ./keys.
+
+### Create a key pair
+To create a new key pair, add the pub key to the docker's authorized_keys and to export the pair to the local machine:
+```
+./keys-create.sh docker_ip container_name key_filename key_passphrase key_comment
+```
+
+EXAMPLE:
+```
+./keys-create.sh 192.168.2.96 phusion-baseimage-test art_keyfile mypassword "this is my key"
+```
 
 ## Change Log
 2019-09-22
