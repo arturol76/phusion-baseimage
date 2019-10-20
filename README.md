@@ -60,7 +60,7 @@ EXAMPLE:
 ./keys-create.sh 192.168.2.96 phusion-baseimage-test art_keyfile mypassword "this is my key"
 ```
 
-The script will export the key pair (pub/private) to the local machine. The key pair can be then imported into [pageant](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for authentication into the docker. Note that only the pub key is needed.
+The script will export the key pair (pub/private) to the local machine. The key pair can be then imported into [pageant](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for authentication into the docker.
 
 ### Import existing key pair
 To import an existing key (and automatically add it to the docker's authorized_keys):
@@ -73,6 +73,8 @@ EXAMPLE:
 ```
 ./keys-inject.sh 192.168.2.96 phusion-baseimage-test art.pub
 ```
+
+Note that only the pub key is needed.
 
 ## Change Log
 2019-09-22
